@@ -27,7 +27,7 @@ docker exec -it [zk_container_id] ./bin/zkCli.sh ls /brokers/topics
 docker-compose scale kafka=3
 
 # Consumer 
-docker exec -it `docker ps -aqf "name=microservicesusingkafka_consumer"` python consumer.py -t new
+docker exec -it `docker ps -aqf "name=microservicesusingkafka_consumer"` python consumer.py -t demo
 
 # Producer 
 docker exec -it `docker ps -aqf "name=microservicesusingkafka_producer"` python prod.py -p 9092 -t demo -m something
